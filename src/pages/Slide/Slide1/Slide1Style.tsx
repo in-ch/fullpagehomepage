@@ -55,6 +55,7 @@ export const Img = styled.img<ShowProps>`
     bottom:${(props)=>props.show ? 30 : 0}px;
     opacity:${(props)=>props.show ? 1 : 0};
     transition: All 2s;
+    z-index:1;
     @media (max-width: 520px) {
         width:190px;
         height:390px;
@@ -76,6 +77,8 @@ export const IInputButton = styled.input<ShowProps>`
     box-shadow:10px 10px 20px 0px rgb(0,0,0,0.4);
     transition:All 0.5s; 
     opacity:${(props)=>props.show ? 1 : 0};
+    z-index:2;
+    position:relative;
     &:hover{
         background-color:#fff;
         color:#b2a3ff;
