@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface ShowProps {
     show:boolean;
+    top?:number;
 }
 export const Container = styled.div`
     width:100%;
@@ -10,46 +11,55 @@ export const Container = styled.div`
     position:relative;
     overflow:hidden;
     margin:0px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 `;
 export const Img = styled.img<ShowProps>`
     width:270px;
     height:550px;
-    box-shadow:50px 30px 30px 0px rgb(50,50,50,0.4);
+    box-shadow:-50px 30px 30px 0px rgb(50,50,50,0.2);
     border-radius:50px;
-    position:absolute;
     opacity:${(props)=>props.show ? 1 : 0};
-    top:${(props)=>props.show ? -220 : -550}px;
-    left:50px;
     transition: All 1s;
+    transform:rotate(180deg);
+    position:relative;
+    top:${(props)=>props.show ? props.top : 0}px;
     @media (max-width: 520px) {
         width:190px;
         height:390px;
         border-radius:25px;
-        top:${(props)=>props.show ? -205 : -390}px;
-        left:10px;
+        top:-50px;
+    }
+    @media (max-width: 380px) {
+        width:160px;
+        height:360px;
     }
 `;
 export const Img2 = styled.img<ShowProps>`
     width:270px;
     height:550px;
-    box-shadow:50px 30px 30px 0px rgb(50,50,50,0.4);
+    box-shadow:-50px 30px 30px 0px rgb(50,50,50,0.2);
     border-radius:50px;
-    position:absolute;
     opacity:${(props)=>props.show ? 1 : 0};
-    bottom:${(props)=>props.show ? -220 : -550}px;
-    right:50px;
     transition: All 1s;
+    position:relative;
+    bottom:${(props)=>props.show ? props.top : 0}px;
     @media (max-width: 520px) {
         width:190px;
         height:390px;
         border-radius:25px;
-        bottom:${(props)=>props.show ? -100 : -390}px;
-        right:20px;
+        bottom:-50px;
+    }
+    @media (max-width: 380px) {
+        width:160px;
+        height:360px;
     }
 `;
 export const Wraper = styled.div`
     width:100%;
-    height:100%;
+    height:14vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -69,4 +79,20 @@ export const Wraper = styled.div`
     p:nth-child(2){
         margin-top:10px;
     }
+`;
+export const Top = styled.div`
+    width:1000px;
+    height:43vh;
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+`;
+export const Bottom = styled.div`
+    width:1000px;
+    height:43vh;
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
 `;
