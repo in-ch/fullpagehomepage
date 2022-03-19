@@ -14,37 +14,47 @@ export const Container = styled.div`
 export const Img = styled.img<ShowProps>`
     width:270px;
     height:550px;
-    box-shadow:50px 30px 30px 0px rgb(50,50,50,0.4);
+    box-shadow:-50px 30px 30px 0px rgb(50,50,50,0.2);
     border-radius:50px;
     position:absolute;
     opacity:${(props)=>props.show ? 1 : 0};
-    top:${(props)=>props.show ? -220 : -550}px;
-    left:50px;
+    top:-100px;
+    left:${(props)=>props.show ? -20 : -550}px;
     transition: All 1s;
+    transform:rotate(90deg);
     @media (max-width: 520px) {
         width:190px;
         height:390px;
         border-radius:25px;
-        top:${(props)=>props.show ? -205 : -390}px;
-        left:10px;
+        top:-50px;
+        left:${(props)=>props.show ? -20 : -550}px;
+    }
+    @media (max-width: 380px) {
+        width:160px;
+        height:360px;
     }
 `;
 export const Img2 = styled.img<ShowProps>`
     width:270px;
     height:550px;
-    box-shadow:50px 30px 30px 0px rgb(50,50,50,0.4);
+    box-shadow:-50px 30px 30px 0px rgb(50,50,50,0.2);
     border-radius:50px;
     position:absolute;
     opacity:${(props)=>props.show ? 1 : 0};
-    bottom:${(props)=>props.show ? -220 : -550}px;
-    right:50px;
+    bottom:-100px;
+    right:${(props)=>props.show ? -20 : -550}px;
+    transform:rotate(270deg);
     transition: All 1s;
     @media (max-width: 520px) {
         width:190px;
         height:390px;
         border-radius:25px;
-        bottom:${(props)=>props.show ? -100 : -390}px;
-        right:20px;
+        bottom:80px;
+        right:${(props)=>props.show ? -20 : -550}px;
+    }
+    @media (max-width: 380px) {
+        width:160px;
+        height:360px;
     }
 `;
 export const Wraper = styled.div`

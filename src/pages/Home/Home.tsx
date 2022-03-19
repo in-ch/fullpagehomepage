@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import FFullPage from "src/components/FullPage";
 import Slide1 from "../Slide/Slide1/Slide1";
 import Slide2 from "../Slide/Slide2/Slide2";
+import Slide3 from "../Slide/Slide3/Slide3";
+import Slide4 from "../Slide/Slide4/Slide4";
+import Slide5 from "../Slide/Slide5/Slide5";
 import { Container } from "./HomeStyle";
 
 
@@ -36,7 +39,15 @@ const Home = () => {
                 Slide2={<Slide2 
                             scrollNum={scrollNum}
                         />}
-                Slide3={<h1>33</h1>}
+                Slide3={<Slide3 
+                            scrollNum={scrollNum}
+                        />}
+                Slide4={<Slide4 
+                            scrollNum={scrollNum}
+                        />}
+                Slide5={<Slide5
+                    scrollNum={scrollNum}
+                />}
             />
         </Container>
     );
