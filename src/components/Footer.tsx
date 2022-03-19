@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -108,7 +109,7 @@ const Footer = () => {
                     <p className="p2">02-2202-0615</p>
                     <p className="p8">담당자 : 010-3294-2949</p>
                     <p className="p3">평일 09:00 ~ 18:00 (주말&공휴일 제외)</p>
-                    <p className="p4">개인정보처리방침 | 이용약관</p>
+                    <p className="p4"><Link to="/privacy">개인정보처리방침</Link> | <Link to="/term">이용약관</Link></p>
                     <p className="p5">Company : Tigre do sud</p>
                     <p className="p6">Address : 319, Daedeok-daero, Seo-gu, Daejeon, Republic of Korea, 205Ho</p>
                     <p className="p6">CEO : incheol, SEONG</p>
