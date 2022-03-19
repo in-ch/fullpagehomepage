@@ -1,6 +1,6 @@
 import { FullPage, Slide } from 'react-full-page';
 
-const FFullPage = ({Slide1,Slide2,Slide3,Slide4}) => {
+const FFullPage = ({Slide1,Slide2,Slide3,Slide4,Slide5}) => {
 
     return (
         <>
@@ -16,6 +16,14 @@ const FFullPage = ({Slide1,Slide2,Slide3,Slide4}) => {
                 </Slide>
                 <Slide>
                     {Slide4}
+                </Slide>
+                <Slide
+                    style={{
+                        height:'40vh',
+                        backgroundColor:'#000',
+                    }}
+                >
+                    {Slide5}
                 </Slide>
             </FullPage>
         </>
