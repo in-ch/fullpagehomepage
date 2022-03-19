@@ -61,6 +61,16 @@ export const Img = styled.img<ShowProps>`
         height:390px;
         transform: rotate(12deg);
         border-radius:25px;
+        right:${(props)=>props.show ? 80 : 0}px;
+        bottom:${(props)=>props.show ? 30 : 0}px;
+    }
+    @media (max-width: 281px) {
+        width:190px;
+        height:390px;
+        transform: rotate(12deg);
+        border-radius:25px;
+        right:${(props)=>props.show ? -50 : 0}px;
+        bottom:${(props)=>props.show ? -30 : 0}px;
     }
 `;
 export const IInputButton = styled.input<ShowProps>`
@@ -87,6 +97,9 @@ export const IInputButton = styled.input<ShowProps>`
         width:120px;
         height:40px;
         margin-top:50px;
+    }
+    @media (max-width: 281px) {
+        margin-top:30px;
     }
 `;
 export const SubText = styled.p<ShowProps>`
