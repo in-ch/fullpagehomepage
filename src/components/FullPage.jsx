@@ -17,12 +17,7 @@ const FFullPage = ({Slide1,Slide2,Slide3,Slide4,Slide5}) => {
                 <Slide>
                     {Slide4}
                 </Slide>
-                <Slide
-                    style={{
-                        height:'40vh',
-                        backgroundColor:'#000',
-                    }}
-                >
+                <Slide>
                     {Slide5}
                 </Slide>
             </FullPage>
